@@ -37,7 +37,7 @@ Dataset: Fitness tracking dataset (e.g., Fitbit or WHO activity datasets)
 
 For my final project, I will be working **individually**.
 
-My general topic is **Sleep and Student Performance**, focusing on how sleep habits influence academic outcomes.
+My general topic is **Student Performance and Lifestyle**, focusing on how different daily habits influence academic outcomes.
 
 ---
 
@@ -47,9 +47,9 @@ I will be using the **Student Alcohol Consumption dataset from Kaggle**.
 
 This dataset includes variables such as:
 - Study time
-- Alcohol consumption
-- Sleep-related proxies (e.g., free time, going out)
-- Social behavior
+- Alcohol consumption (weekday and weekend)
+- Social activities (going out)
+- Absences
 - Final grades
 
 ---
@@ -57,25 +57,25 @@ This dataset includes variables such as:
 ### Pros and Cons of Dataset
 
 **Pros:**
-- Includes multiple lifestyle variables that relate to sleep and daily habits
-- Clean and widely used dataset
+- Contains multiple relevant variables related to student lifestyle and performance
+- Clean and well-structured dataset
 - Suitable for correlation and regression analysis
 
 **Cons:**
-- Does not directly measure sleep duration (must use proxies)
 - Based on self-reported data (possible bias)
 - Limited demographic (students in Portugal)
+- May not fully represent all student populations
 
 ---
 
 ### Research Questions
 
-1. How do lifestyle factors related to sleep (such as free time and going out) affect students’ academic performance?
-2. Is there a relationship between study time and performance when controlling for lifestyle factors?
-3. Do students with more structured daily routines perform better academically?
+1. How does alcohol consumption affect students’ academic performance (final grades)?
+2. Is there a relationship between study time and academic performance?
+3. Do social behaviors (such as going out) negatively impact academic outcomes?
 
 ---
 
 ### Project Goal
 
-Through this project, I aim to analyze how sleep-related behaviors and daily habits influence academic performance using data analysis and visualization techniques. I may also apply basic regression models to better understand these relationships.
+Through this project, I aim to analyze how lifestyle factors such as study habits, alcohol consumption, and social behavior influence academic performance using data analysis and visualization techniques. I may also apply basic regression models to better understand these relationships.
