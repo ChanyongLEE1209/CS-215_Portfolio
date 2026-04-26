@@ -1,49 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Mini Project 5</title>
-</head>
+# Mini Project 5: Working with Geospatial Data
 
-<body>
-  <h1>Mini Project 5: Working with Geospatial Data</h1>
+For this project, I analyzed Professor Wirfs-Brock's location data from her visit to Whitman College in March 2022. The dataset includes latitude, longitude, and timestamp information, which allowed me to examine both where she traveled and how her distance from campus changed over time.
 
-  <p>
-    For this project, I analyzed Professor Wirfs-Brock's location data from her visit to Whitman College in March 2022.
-    I used latitude, longitude, timestamps, and the haversine formula to study how her movement changed over time.
-  </p>
+## Hypothesis
 
-  <h2>Hypothesis</h2>
-  <p>
-    My hypothesis is that Professor Wirfs-Brock's movement followed a travel pattern: long-distance arrival,
-    a concentrated stay near Whitman College, and long-distance departure.
-  </p>
+My hypothesis is that Professor Wirfs-Brock's movement followed a structured travel pattern: long-distance arrival, a concentrated stay near Whitman College, and long-distance departure.
 
-  <h2>Interactive Map</h2>
-  <p>
-    The map shows several major location clusters, including Seattle, Whitman College in Walla Walla, one point along the travel route,
-    and Denver. This suggests that the data captures both local campus movement and long-distance travel.
-  </p>
+To test this hypothesis, I calculated her distance from Reid Campus Center at each timestamp using the haversine formula. I then visualized the location points on a Plotly map and created a distance-over-time graph.
 
-  <iframe src="map.html" width="100%" height="500"></iframe>
+## Interactive Map
 
-  <h2>Distance from Reid Campus Center Over Time</h2>
-  <p>
-    To support my hypothesis, I calculated Professor Wirfs-Brock's distance from Reid Campus Center at each timestamp.
-    The graph shows that the distance starts very high, drops close to zero during the Whitman visit,
-    and then rises again near the end of the dataset.
-  </p>
+The map shows three main clusters of activity: near Seattle, around Whitman College, and near Denver. There is also a point located between Seattle and Whitman, which likely represents travel between locations.
 
-  <iframe src="distance.html" width="100%" height="500"></iframe>
+<iframe src="map.html" width="100%" height="500"></iframe>
 
-  <h2>Conclusion</h2>
-  <p>
-    The visualizations support my hypothesis. Professor Wirfs-Brock appears to have traveled from a distant location,
-    spent most of the visit near Whitman College, and then departed to another distant location.
-    The map shows the spatial pattern, while the distance graph shows the movement pattern over time.
-  </p>
+## Distance from Reid Campus Center Over Time
 
-  <p>
-    <a href="index.html">Back to Home</a>
-  </p>
-</body>
-</html>
+The distance-over-time graph supports the map pattern. At the beginning of the dataset, the distance from Whitman College is very large, suggesting that Professor Wirfs-Brock was far away. The distance then decreases in stages, suggesting movement first to an intermediate location, likely the Seattle area, and then to Whitman College.
+
+For an extended period, the distance remains close to zero, showing that she stayed near campus. Toward the end of the dataset, the distance increases again, reflecting her departure from Walla Walla and movement toward a distant location.
+
+<iframe src="distance.html" width="100%" height="500"></iframe>
+
+## Timezone Note
+
+The timestamps appear to be recorded in UTC, while the locations span multiple time zones. Because of this, I focused on the overall sequence and relative movement pattern rather than exact local clock times.
+
+## Conclusion
+
+The data supports my hypothesis that Professor Wirfs-Brock's visit followed a travel pattern of arrival, local campus activity, and departure. The map shows the spatial clusters, while the distance graph shows how her distance from Whitman changed over time. Together, these visualizations create a clearer story of her movement during the visit.
+
+[Back to Home](index.html)
