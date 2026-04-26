@@ -146,7 +146,17 @@ For the weather dataset, I converted hourly data into daily averages and examine
 
 ### Interactive Visualization
 
-I created interactive visualizations using Plotly to explore the data more effectively. These visualizations allow zooming and closer inspection of trends and relationships, making it easier to identify patterns in activity behavior.
+### Daily Steps Over Time
+
+![Steps Over Time](images/steps_over_time.png)
+
+This visualization shows how average daily steps change over time. The data reveals noticeable variability and suggests possible seasonal patterns in physical activity levels.
+
+### Sedentary Time vs Steps
+
+![Sedentary vs Steps](images/sedentary_vs_steps.png)
+
+This scatter plot illustrates the relationship between sedentary time and daily steps. The data shows a weak negative relationship, indicating that higher sedentary behavior is generally associated with lower physical activity, though the effect is not strong.
 
 ### Key Insights
 
