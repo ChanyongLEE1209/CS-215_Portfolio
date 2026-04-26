@@ -1,138 +1,133 @@
-# CS215 Portfolio - Peter Lee
+# Data Science Finals Portfolio - Peter Lee
 
 ## About Me
-I am a student at Whitman College majoring in Physics with an interest in engineering and data science. I enjoy exploring how data can be used to understand real-world problems, especially in areas like technology, education, and human behavior. 
-
+I am a student at Whitman College taking Data Science Class. This is the Final Project for the class.
 Through this course, I hope to strengthen my skills in data analysis and visualization, and to build projects that reflect my academic and personal interests.
 
-## Final Project Ideas
+## Project Idea 1: Weather and Productivity
 
-### 1. Topic: Social Media & User Behavior
-Dataset: TikTok / Instagram usage datasets (e.g., Kaggle social media usage data)
-
-- How does daily screen time correlate with reported happiness levels?
-- Does the type of content (entertainment vs educational) affect engagement time?
+Questions:
+- How does weather (temperature, precipitation, sunlight) affect daily productivity?
+- Which weather condition has the strongest relationship with productivity levels?
 
 ---
 
-### 2. Topic: Student Performance & Lifestyle
-Dataset: Student performance dataset (e.g., Kaggle student alcohol consumption dataset)
+## Project Idea 2: Weather and Physical Activity
 
-- How does sleep duration affect GPA or test scores?
-- Is there a relationship between alcohol consumption and academic performance?
+Questions:
+- How does weather influence physical activity levels?
+- Do people exercise less on days with extreme temperatures or rain?
 
 ---
 
-### 3. Topic: Health & Physical Activity
-Dataset: Fitness tracking dataset (e.g., Fitbit or WHO activity datasets)
+## Project Idea 3: Weather and Sleep Patterns
 
-- Does exercise frequency correlate with resting heart rate?
-- How does physical activity level relate to reported stress levels?
+Questions:
+- How does temperature affect sleep duration and quality?
+- Are extreme weather conditions associated with poorer sleep?
 
 ---
 
 ## Week 10 Update
 
-### Project Plan
+I will be working on this project individually.
 
-For my final project, I will be working **individually**.
+My general topic is exploring the relationship between **weather conditions and productivity-related behaviors**. Initially, I wanted to directly analyze productivity, but I found that there are no reliable datasets with daily productivity measurements. Therefore, I will instead use **proxy variables for productivity**, such as physical activity or screen time.
 
-My general topic is **Student Performance and Lifestyle**, focusing on how different daily habits influence academic outcomes.
+### Data Sources
 
----
+- **Open-Meteo (weather data)**  
+  - Pros: Flexible, clean, daily data with location and time control  
+  - Cons: Only provides weather variables and must be combined with another dataset  
 
-### Dataset
-
-I will be using the **Student Alcohol Consumption dataset from Kaggle**.
-
-This dataset includes variables such as:
-- Study time
-- Alcohol consumption (weekday and weekend)
-- Social activities (going out)
-- Absences
-- Final grades
-
----
-
-### Pros and Cons of Dataset
-
-**Pros:**
-- Contains multiple relevant variables related to student lifestyle and performance
-- Clean and well-structured dataset
-- Suitable for correlation and regression analysis
-
-**Cons:**
-- Based on self-reported data (possible bias)
-- Limited demographic (students in Portugal)
-- May not fully represent all student populations
-
----
+- **Activity / Screen Time datasets (proxy for productivity)**  
+  - Pros: Can represent behavior related to productivity  
+  - Cons: May be messy or not perfectly aligned with weather data  
 
 ### Research Questions
 
-1. How does alcohol consumption affect students’ academic performance (final grades)?
-2. Is there a relationship between study time and academic performance?
-3. Do social behaviors (such as going out) negatively impact academic outcomes?
-
+- How do weather conditions (temperature, precipitation, sunlight) affect activity levels or screen time?  
+- Are certain weather conditions associated with more “productive” behaviors?  
+- Is there a noticeable trend in behavior changes across different weather patterns?
 ---
 
-### Project Goal
-
-Through this project, I aim to analyze how lifestyle factors such as study habits, alcohol consumption, and social behavior influence academic performance using data analysis and visualization techniques. I may also apply basic regression models to better understand these relationships.
-
----
 ## Week 11 Update
 
-### Data Source
+### Data Sources
 
-For this project, I decided to use the **Student Alcohol Consumption dataset from Kaggle**. I chose this dataset because it includes multiple variables related to students’ lifestyle behaviors (such as study time, alcohol consumption, and social activity) along with academic performance (final grades). This makes it well-suited for exploring relationships between daily habits and student outcomes.
+For my final project, I decided to analyze how weather influences daily productivity-related behavior using two datasets:
+
+1. **Wearable Activity Dataset (Norway, 2019–2020)**  
+   - Daily data from 113 participants using Garmin/Fitbit devices  
+   - Includes steps, activity levels (light, moderate, vigorous), and sedentary time  
+
+2. **Open-Meteo Weather Data**  
+   - Daily weather data (temperature, precipitation, cloud cover, etc.)  
+   - Matched to the same date range (2019–2020)  
+
+I chose these datasets because they allow for a real-world, time-aligned comparison between environmental conditions and human behavior.
 
 ---
 
 ### Data Acquisition
 
-I obtained the dataset from Kaggle and uploaded it into a Google Colab notebook. I then used Python (pandas) to load and inspect the data. The dataset contains 395 student records and 33 variables.
+The activity dataset was obtained from a publicly available research dataset.  
+The weather data was collected using the Open-Meteo API and exported as a CSV file.
 
 ---
 
-### Data Provenance and Considerations
+### Data Considerations (Strengths & Limitations)
 
-The dataset was collected through surveys of secondary school students in Portugal and was originally compiled by P. Cortez and A. Silva (2008). Because the data is self-reported, it may contain bias or inaccuracies in how students report behaviors such as alcohol consumption or study time.
+**Strengths:**
+- High-resolution daily data  
+- Real-world behavioral data from wearable devices  
+- Multiple activity variables for richer analysis  
 
-Additionally, since the dataset is limited to students in Portugal, the results may not be generalizable to other populations or educational systems.
-
----
-
-### Exploratory Analysis
-
-From my initial analysis, I examined summary statistics and correlations between key variables. I found that most lifestyle variables have very weak relationships with academic performance.
-
-Study time shows a slight positive relationship with final grades, while social activity (going out) has a small negative relationship. Alcohol consumption (both weekday and weekend) shows little to no meaningful correlation with academic performance.
-
-Overall, the data suggests that these lifestyle factors alone do not strongly explain variation in student grades.
+**Limitations:**
+- Activity is only a proxy for productivity  
+- Missing values (e.g., some devices do not track all variables)  
+- Data is averaged across individuals, losing personal variation  
+- Dataset is limited to Norway, so results may not generalize  
 
 ---
 
-### Data Cleaning / Wrangling
+### Preliminary Analysis
 
-The dataset does not contain missing values, so no major cleaning was required at this stage. However, several preprocessing steps are still necessary.
+I loaded both datasets into Google Colab and inspected their structure.  
+Initial exploration showed that:
 
-Many variables are ordinal (scaled values from 1–5), meaning they represent categories rather than precise quantities. These must be interpreted carefully in analysis. Additionally, categorical variables (such as gender or job type) may need to be converted into numerical form if used in modeling.
-
-I also plan to create new variables, such as a combined alcohol consumption measure (e.g., total alcohol = Dalc + Walc), to better represent overall behavior.
+- Activity data includes multiple participants per day  
+- Weather data is already aggregated at the daily level  
+- Date formats differ between datasets and need to be standardized  
 
 ---
 
-### Limitations
+### Data Cleaning & Wrangling
 
-This dataset has several limitations. First, it is based on self-reported survey data, which may introduce bias. Second, the dataset only includes students from a specific region (Portugal), limiting generalizability.
+So far, I have identified the following steps:
 
-Additionally, many variables are ordinal, which restricts the types of statistical analysis that can be applied. Finally, correlation analysis does not imply causation, so observed relationships cannot be interpreted as cause-and-effect.
+- Rename columns to improve readability  
+- Convert date formats into a consistent datetime format  
+- Select relevant variables (steps, activity levels, sedentary time)  
+- Aggregate activity data by date (daily population average)  
+- Merge activity and weather datasets on date  
+
+I also plan to create a **productivity score** based on activity variables.
 
 ---
 
 ### Challenges
 
-One challenge is that the dataset does not show strong relationships between variables, making it difficult to draw clear conclusions. Another challenge is that many variables are ordinal rather than continuous, which limits analytical approaches.
+- Defining a meaningful and defensible productivity metric  
+- Handling missing or inconsistent activity data  
+- Aligning multiple participants' data with a single daily weather value  
+- Ensuring that results are interpretable and not misleading  
 
-Moving forward, a key challenge will be identifying meaningful patterns and potentially applying more advanced methods to better understand the data.
+---
+
+### Next Steps
+
+- Complete data cleaning and merging  
+- Engineer a productivity score  
+- Perform correlation and visualization analysis  
+- Explore more advanced relationships between weather and activity  
