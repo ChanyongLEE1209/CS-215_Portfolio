@@ -11,15 +11,15 @@ My final project explores how weather conditions affect daily productivity-relat
 ## Final Project Updates
 
 ### [Mini-Project-5](mini-project-5.html)
-Mini Project 5 that was done during the semester.
+An interactive mapping project completed during the semester.
 
-### [Week 10 Update](week10_update.html)
+### [Week 10 Update](week10_update.md)
 Initial project topic selection and research questions.
 
-### [Week 11 Update](week11_update.html)
+### [Week 11 Update](week11_update.md)
 Dataset selection, data acquisition, cleaning plan, and early exploratory analysis.
 
-### [Week 12 Update](week12_update.html)
+### [Week 12 Update](week12_update.md)
 Exploratory analysis, grouped activity analysis, weather merge, and interactive visualization.
 
 ---
