@@ -80,3 +80,5 @@ I also plan to create a **productivity score** based on activity variables.
 - Explore more advanced relationships between weather and activity
 
 ---
+
+[Back to Home](index.html)
