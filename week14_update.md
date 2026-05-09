@@ -52,6 +52,11 @@ I still need to:
 
 ## New Technique: Multiple Linear Regression with Interaction Terms
 
+<iframe 
+  src="regression_temperature_activity_group.html" 
+  style="width:100%; height:680px; border:none;">
+</iframe>
+
 For my new technique, I plan to use **multiple linear regression with interaction terms**.
 
 So far, most of my analysis has been visual. The graphs suggest that warmer days are associated with more steps, but I want to test this pattern more carefully. I also want to know whether the relationship between temperature and steps is different for low-, medium-, and high-activity participants.
