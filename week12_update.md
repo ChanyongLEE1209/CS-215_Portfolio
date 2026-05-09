@@ -55,9 +55,18 @@ Precipitation did not show a strong relationship with steps. Average steps were 
 
 Cloud cover showed a mild pattern. Very cloudy days were associated with slightly lower steps, especially for medium- and high-activity participants, but the pattern was not as strong as temperature.
 
-## Interactive Visualization
+## Interactive Visualizations
 
-The interactive visualization below shows the relationship between daily temperature and average daily steps by activity group.
+The first interactive visualization summarizes average daily steps by temperature range and activity group. This version makes the overall pattern easier to see.
+
+<iframe 
+  src="temperature_activity_group_plotly.html" 
+  width="100%" 
+  height="650" 
+  frameborder="0">
+</iframe>
+
+The second interactive visualization shows daily temperature and average steps using the full merged dataset. Each point represents one activity group on one day, and the hover information includes date, precipitation, and cloud cover.
 
 <iframe 
   src="temperature_steps_scatter_plotly.html" 
@@ -65,7 +74,6 @@ The interactive visualization below shows the relationship between daily tempera
   height="700" 
   frameborder="0">
 </iframe>
-
 ## Key Insights
 
 - Temperature had the clearest relationship with daily steps.
