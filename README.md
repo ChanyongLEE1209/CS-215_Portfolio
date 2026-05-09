@@ -22,6 +22,9 @@ Dataset selection, data acquisition, cleaning plan, and early exploratory analys
 ### [Week 12 Update](week12_update.md)
 Exploratory analysis, grouped activity analysis, weather merge, and interactive visualization.
 
+### [Week 14 Update](week14_update.md)
+Project progress, new regression technique, and final communication strategy.
+
 ---
 
 ## Project Focus
