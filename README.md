@@ -10,6 +10,9 @@ My final project explores how weather conditions affect daily productivity-relat
 
 ## Final Project Updates
 
+### [Mini-Project-5][mini-project-5.html]
+Mini project 5 that was done during the semester
+
 ### [Week 10 Update](week10.html)
 Initial project topic selection and research questions.
 
