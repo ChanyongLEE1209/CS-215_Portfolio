@@ -1,6 +1,5 @@
 # Week 12 Update
 
-[Back to Home](index.html)
 
 ## Exploratory Analysis and Updated Research Question
 
@@ -78,3 +77,5 @@ The interactive visualization below shows the relationship between daily tempera
 ## Next Steps
 
 Next, I would like to refine the analysis by controlling for seasonality and exploring whether weather affects not only steps, but also sedentary time and moderate or vigorous activity minutes.
+
+[Back to Home](index.html)
