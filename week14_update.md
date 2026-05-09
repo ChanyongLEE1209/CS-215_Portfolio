@@ -66,4 +66,12 @@ The model I plan to use is:
 ```text
 steps ~ temperature * activity_group + precipitation + cloud_cover
 
+## Communication Strategy
+
+For my final project, I plan to organize the narrative as a clear data story. I will begin by explaining the problem: productivity is difficult to measure directly, so I use physical activity as a proxy for productivity-related behavior. Then I will introduce the two datasets, explain how I cleaned and merged them, and show why I divided participants into low-, medium-, and high-activity groups.
+
+The visuals will be sequenced from broad exploration to final analysis. I will first show weather exploration graphs, such as monthly temperature trends, precipitation distribution, and cloud cover distribution. Then I will show the activity group comparison to explain the low-, medium-, and high-activity categories. After that, I will present the main results: temperature versus steps by activity group, followed by the interactive Plotly scatter plot and the regression prediction graph.
+
+For the class presentation, I plan to present directly from my project web page rather than making a separate slide deck. This will allow me to show the narrative, static graphs, and interactive Plotly visualizations in one place. I may prepare a short outline for myself so that the presentation stays organized, but the website will be the main presentation tool.
+
 [Back to Home](index.html)
