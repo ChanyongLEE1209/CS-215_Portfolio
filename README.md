@@ -25,6 +25,8 @@ Exploratory analysis, grouped activity analysis, weather merge, and interactive 
 ### [Week 14 Update](week14_update.md)
 Project progress, new regression technique, and final communication strategy.
 
+### [Final Project: Weather and Daily Activity](final_presentation.md)
+A complete final project page with background, data, methods, visualizations, findings, limitations, and reflection.
 ---
 
 ## Project Focus
