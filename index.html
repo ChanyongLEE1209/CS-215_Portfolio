@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather & Daily Activity</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="hero">
+    <div class="cloud cloud-one">☁️</div>
+    <div class="cloud cloud-two">☁️</div>
+    <div class="sun">☀️</div>
+
+    <p class="tag">CS 215 Final Project</p>
+    <h1>Does Weather Change How Much We Move?</h1>
+    <p class="hero-text">
+      A small data science story about temperature, clouds, rain, and daily steps.
+    </p>
+
+    <a href="#story" class="start-button">Start the Story ↓</a>
+  </header>
+
+  <main id="story">
+    <section class="paper-card intro-card">
+      <div class="sticker">🌈</div>
+      <h2>My Big Question</h2>
+      <p>
+        I wanted to know whether weather affects daily activity. Since productivity
+        is hard to measure directly, I used average daily steps as a simple
+        productivity-related behavior.
+      </p>
+      <p>
+        I combined a wearable activity dataset from Norway with Open-Meteo weather
+        data. Then I compared daily steps with temperature, precipitation, and
+        cloud cover.
+      </p>
+    </section>
+
+    <section class="three-boxes">
+      <div class="small-card yellow">
+        <h3>👟 Activity Data</h3>
+        <p>Daily steps and activity records from 113 participants.</p>
+      </div>
+
+      <div class="small-card blue">
+        <h3>🌦️ Weather Data</h3>
+        <p>Temperature, precipitation, and cloud cover from Open-Meteo.</p>
+      </div>
+
+      <div class="small-card green">
+        <h3>🧪 Method</h3>
+        <p>I grouped people into low, medium, and high activity groups.</p>
+      </div>
+    </section>
+
+    <section class="paper-card">
+      <div class="sticker">❓</div>
+      <h2>Research Questions</h2>
+      <ul class="question-list">
+        <li>Does warmer weather lead to more steps?</li>
+        <li>Do low-, medium-, and high-activity people react differently?</li>
+        <li>Do rainy days reduce activity?</li>
+        <li>Do cloudy days change step counts?</li>
+      </ul>
+    </section>
+
+    <section class="paper-card viz-card">
+      <div class="sticker">📊</div>
+      <h2>1. Steps by Temperature Range</h2>
+      <p>
+        This graph shows average daily steps across different temperature ranges.
+        The main pattern is simple: people usually walked more when the weather
+        was warmer.
+      </p>
+
+      <div class="graph-frame">
+        <iframe src="colab-notebook/temperature_activity_group_plotly.html"></iframe>
+      </div>
+    </section>
+
+    <section class="paper-card viz-card">
+      <div class="sticker">🌡️</div>
+      <h2>2. Daily Temperature vs. Steps</h2>
+      <p>
+        This scatter plot shows daily observations. Each point represents one
+        activity group on one day. The trend suggests that warmer days are
+        generally linked with higher step counts.
+      </p>
+
+      <div class="graph-frame">
+        <iframe src="colab-notebook/temperature_steps_scatter_plotly.html"></iframe>
+      </div>
+    </section>
+
+    <section class="paper-card viz-card">
+      <div class="sticker">🔍</div>
+      <h2>3. Regression Prediction</h2>
+      <p>
+        I also used a regression model with interaction terms. This helped me
+        compare whether the temperature-step relationship was different for low-,
+        medium-, and high-activity groups.
+      </p>
+
+      <div class="graph-frame">
+        <iframe src="colab-notebook/regression_temperature_activity_group.html"></iframe>
+      </div>
+    </section>
+
+    <section class="paper-card finding-card">
+      <div class="sticker">⭐</div>
+      <h2>What I Found</h2>
+
+      <div class="finding">
+        <h3>☀️ Temperature mattered the most.</h3>
+        <p>
+          Warmer days were associated with higher average daily steps across all
+          three activity groups.
+        </p>
+      </div>
+
+      <div class="finding">
+        <h3>🌧️ Rain was weaker than expected.</h3>
+        <p>
+          I expected rainy days to clearly reduce activity, but precipitation did
+          not show a strong negative pattern.
+        </p>
+      </div>
+
+      <div class="finding">
+        <h3>☁️ Clouds may matter a little.</h3>
+        <p>
+          Very cloudy days were associated with slightly lower steps, but the
+          relationship was not as clear as temperature.
+        </p>
+      </div>
+    </section>
+
+    <section class="paper-card conclusion-card">
+      <div class="sticker">🏁</div>
+      <h2>Conclusion</h2>
+      <p>
+        Overall, this project suggests that weather is related to daily activity.
+        Temperature was the clearest weather factor: warmer days were generally
+        associated with more steps. However, this does not prove that weather
+        directly caused people to walk more. The data shows association, not
+        causation.
+      </p>
+      <p>
+        If I had more time, I would add sleep, study time, or screen time data to
+        measure productivity more directly.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Peter Lee for CS 215</p>
+    <p class="footer-note">Weather + Activity + Data Science</p>
+  </footer>
+</body>
+</html>
