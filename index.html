@@ -16,95 +16,182 @@
     <p class="tag">CS 215 Final Project</p>
     <h1>Does Weather Change How Much We Move?</h1>
     <p class="hero-text">
-      A small data science story about temperature, clouds, rain, and daily steps.
+      A data science story about temperature, clouds, rain, and daily steps.
     </p>
 
     <a href="#story" class="start-button">Start the Story ↓</a>
   </header>
 
   <main id="story">
+
     <section class="paper-card intro-card">
       <div class="sticker">🌈</div>
       <h2>My Big Question</h2>
       <p>
-        I wanted to know whether weather affects daily activity. Since productivity
-        is hard to measure directly, I used average daily steps as a simple
-        productivity-related behavior.
+        I wanted to know whether weather conditions are related to daily activity.
+        Since productivity is difficult to measure directly, I used average daily
+        steps as a simple proxy for productivity-related behavior.
       </p>
       <p>
-        I combined a wearable activity dataset from Norway with Open-Meteo weather
-        data. Then I compared daily steps with temperature, precipitation, and
-        cloud cover.
+        This does not mean that steps perfectly measure productivity. Instead,
+        steps give one measurable way to study daily routine, movement, and
+        behavior across different weather conditions.
       </p>
     </section>
 
     <section class="three-boxes">
       <div class="small-card yellow">
         <h3>👟 Activity Data</h3>
-        <p>Daily steps and activity records from 113 participants.</p>
+        <p>
+          Daily wearable activity records from 113 participants in Norway.
+        </p>
       </div>
 
       <div class="small-card blue">
         <h3>🌦️ Weather Data</h3>
-        <p>Temperature, precipitation, and cloud cover from Open-Meteo.</p>
+        <p>
+          Temperature, precipitation, and cloud cover data from Open-Meteo.
+        </p>
       </div>
 
       <div class="small-card green">
         <h3>🧪 Method</h3>
-        <p>I grouped people into low, medium, and high activity groups.</p>
+        <p>
+          I cleaned, grouped, aggregated, and merged the datasets by date.
+        </p>
       </div>
     </section>
 
     <section class="paper-card">
       <div class="sticker">❓</div>
       <h2>Research Questions</h2>
+      <p>
+        My project focuses on how weather is connected to physical activity.
+        I used the following questions to guide the analysis:
+      </p>
+
       <ul class="question-list">
-        <li>Does warmer weather lead to more steps?</li>
-        <li>Do low-, medium-, and high-activity people react differently?</li>
-        <li>Do rainy days reduce activity?</li>
-        <li>Do cloudy days change step counts?</li>
+        <li>Does warmer weather relate to higher average daily steps?</li>
+        <li>Do low-, medium-, and high-activity participants respond differently?</li>
+        <li>Are rainy days associated with lower activity?</li>
+        <li>Does cloud cover change daily step counts?</li>
       </ul>
+    </section>
+
+    <section class="paper-card process-card">
+      <div class="sticker">🧹</div>
+      <h2>How I Prepared the Data</h2>
+      <p>
+        The two datasets did not match perfectly at first. The activity dataset
+        was organized by participant and date, while the weather dataset included
+        weather measurements over time. To make the datasets work together, I
+        cleaned the date columns, summarized weather by day, and then merged the
+        two datasets using matching dates.
+      </p>
+
+      <div class="process-steps">
+        <div>
+          <span>1</span>
+          <h3>Clean</h3>
+          <p>Fix date formats and remove values that could not be used.</p>
+        </div>
+
+        <div>
+          <span>2</span>
+          <h3>Group</h3>
+          <p>Create low-, medium-, and high-activity groups by average steps.</p>
+        </div>
+
+        <div>
+          <span>3</span>
+          <h3>Merge</h3>
+          <p>Combine daily activity data with daily weather data by date.</p>
+        </div>
+      </div>
     </section>
 
     <section class="paper-card viz-card">
       <div class="sticker">📊</div>
       <h2>1. Steps by Temperature Range</h2>
       <p>
-        This graph shows average daily steps across different temperature ranges.
-        The main pattern is simple: people usually walked more when the weather
-        was warmer.
+        This graph compares average daily steps across different temperature
+        ranges. The main pattern is that people generally walked more when the
+        weather was warmer.
       </p>
 
       <div class="graph-frame">
-        <iframe src="colab-notebook/temperature_activity_group_plotly.html"></iframe>
+        <iframe 
+          src="colab-notebook/temperature_activity_group_plotly.html"
+          title="Interactive line chart showing average daily steps by temperature range and activity group">
+        </iframe>
       </div>
+
+      <p class="caption">
+        Key idea: temperature appears to have the clearest relationship with daily steps.
+      </p>
     </section>
 
     <section class="paper-card viz-card">
       <div class="sticker">🌡️</div>
       <h2>2. Daily Temperature vs. Steps</h2>
       <p>
-        This scatter plot shows daily observations. Each point represents one
-        activity group on one day. The trend suggests that warmer days are
-        generally linked with higher step counts.
+        This scatter plot shows daily observations. Each point represents an
+        activity group on a specific day. The trend suggests that warmer days are
+        generally associated with higher step counts.
       </p>
 
       <div class="graph-frame">
-        <iframe src="colab-notebook/temperature_steps_scatter_plotly.html"></iframe>
+        <iframe 
+          src="colab-notebook/temperature_steps_scatter_plotly.html"
+          title="Interactive scatter plot showing daily temperature and average steps by activity group">
+        </iframe>
       </div>
+
+      <p class="caption">
+        Key idea: high-activity participants still had the highest step counts,
+        but all groups showed some relationship with temperature.
+      </p>
     </section>
 
     <section class="paper-card viz-card">
       <div class="sticker">🔍</div>
       <h2>3. Regression Prediction</h2>
       <p>
-        I also used a regression model with interaction terms. This helped me
-        compare whether the temperature-step relationship was different for low-,
-        medium-, and high-activity groups.
+        For my new technique, I used a multiple linear regression model with
+        interaction terms. This helped me compare whether the relationship
+        between temperature and steps was different for low-, medium-, and
+        high-activity groups.
       </p>
 
       <div class="graph-frame">
-        <iframe src="colab-notebook/regression_temperature_activity_group.html"></iframe>
+        <iframe 
+          src="colab-notebook/regression_temperature_activity_group.html"
+          title="Interactive regression prediction chart showing temperature and daily steps by activity group">
+        </iframe>
+      </div>
+
+      <p class="caption">
+        New technique: regression with interaction terms allowed me to compare
+        temperature effects across different activity groups.
+      </p>
+    </section>
+
+    <section class="paper-card technique-card">
+      <div class="sticker">🧠</div>
+      <h2>New Technique: Regression with Interaction Terms</h2>
+      <p>
+        A normal regression model can show whether temperature and steps are
+        related overall. However, my project also asks whether different activity
+        groups respond differently to temperature.
+      </p>
+      <p>
+        To answer that, I used an interaction term between temperature and
+        activity group. This allowed the model to estimate different temperature
+        patterns for low-, medium-, and high-activity participants.
+      </p>
+
+      <div class="formula-box">
+        steps ~ temperature × activity group
       </div>
     </section>
 
@@ -124,34 +211,97 @@
         <h3>🌧️ Rain was weaker than expected.</h3>
         <p>
           I expected rainy days to clearly reduce activity, but precipitation did
-          not show a strong negative pattern.
+          not show a strong negative pattern in this dataset.
         </p>
       </div>
 
       <div class="finding">
         <h3>☁️ Clouds may matter a little.</h3>
         <p>
-          Very cloudy days were associated with slightly lower steps, but the
-          relationship was not as clear as temperature.
+          Cloudier days were associated with slightly lower steps, but this
+          relationship was not as clear as the relationship between temperature
+          and steps.
         </p>
       </div>
+    </section>
+
+    <section class="paper-card limitation-card">
+      <div class="sticker">⚠️</div>
+      <h2>Important Limitations</h2>
+      <p>
+        This project shows association, not causation. Even if warmer days are
+        linked with more steps, this does not prove that temperature directly
+        caused people to walk more.
+      </p>
+      <p>
+        Another limitation is that physical activity is only a proxy for
+        productivity-related behavior. A person can be productive without walking
+        a lot, and a person can walk a lot without being academically or
+        professionally productive.
+      </p>
+    </section>
+
+    <section class="wide-card light-card">
+      <h2>How I Built This Project</h2>
+      <p>
+        I combined a Norway wearable activity dataset with Open-Meteo weather
+        data. The activity dataset included daily step counts and activity
+        measures for 113 participants, while the weather dataset included
+        temperature, precipitation, and cloud cover.
+      </p>
+      <p>
+        The main challenge was making the two datasets work together. The
+        activity data was daily participant-level data, but the weather data had
+        to be cleaned and summarized into daily weather values. After that, I
+        grouped participants into low-, medium-, and high-activity groups and
+        merged the datasets by date.
+      </p>
+      <p>
+        I used Python, pandas, Plotly, and statsmodels to clean the data, create
+        interactive visualizations, and build a regression model with interaction
+        terms.
+      </p>
+    </section>
+
+    <section class="wide-card dark-card">
+      <h2>What This Reveals</h2>
+      <p>
+        Overall, the data suggests that weather conditions are connected to daily
+        physical activity. Temperature showed the clearest pattern: warmer days
+        were generally linked with more steps. This pattern appeared across low-,
+        medium-, and high-activity groups.
+      </p>
+      <p>
+        However, the results were not equally strong for every weather variable.
+        Precipitation was weaker than expected, and cloud cover only showed a
+        small relationship with activity. This suggests that temperature may be a
+        more useful predictor of daily movement than rain or clouds in this
+        dataset.
+      </p>
+      <p>
+        If I extended this project, I would add more direct productivity measures,
+        such as study time, sleep, screen time, or assignment completion. That
+        would make it possible to study productivity more directly instead of
+        using daily steps as a proxy.
+      </p>
     </section>
 
     <section class="paper-card conclusion-card">
       <div class="sticker">🏁</div>
       <h2>Conclusion</h2>
       <p>
-        Overall, this project suggests that weather is related to daily activity.
-        Temperature was the clearest weather factor: warmer days were generally
-        associated with more steps. However, this does not prove that weather
-        directly caused people to walk more. The data shows association, not
-        causation.
+        My main conclusion is that weather does seem related to daily activity,
+        especially through temperature. Warmer days were generally associated
+        with higher average daily steps, while rain and cloud cover showed weaker
+        patterns.
       </p>
       <p>
-        If I had more time, I would add sleep, study time, or screen time data to
-        measure productivity more directly.
+        The project also helped me understand how important data cleaning and
+        merging are in real data science work. The final visualizations only made
+        sense after the two datasets were carefully prepared and combined.
       </p>
     </section>
+
   </main>
 
   <footer>
